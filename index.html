@@ -1,25 +1,29 @@
 
-width=device-width, initial-scale=1.0"/>
-  <title>Мастер Кристина — Гадание, Чистка, Защита</title>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Мастер Кристина — Магическая помощь</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: url('https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1599599810698-0c4c0e26e311?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
-      line-height: 1.6;
     }
     header, footer {
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.85);
       padding: 20px;
       text-align: center;
     }
     header h1 {
       margin: 0;
       font-size: 2em;
-      color: #d8b4fe;
+      color: #f0b3ff;
     }
     section {
       background: rgba(0, 0, 0, 0.75);
@@ -29,17 +33,15 @@ width=device-width, initial-scale=1.0"/>
       border-radius: 10px;
     }
     h2 {
-      color: #d8b4fe;
+      color: #ffccff;
       position: relative;
-      padding-left: 30px;
+      padding-left: 24px;
     }
     h2::before {
-      content: "✦";
+      content: "★";
       position: absolute;
       left: 0;
-      top: 0;
-      font-size: 1.5em;
-      color: #f5e0ff;
+      color: #ffccff;
     }
     .contact-form input, .contact-form textarea {
       width: 100%;
@@ -51,7 +53,7 @@ width=device-width, initial-scale=1.0"/>
       border-radius: 4px;
     }
     .contact-form button {
-      background: #d8b4fe;
+      background: #ffccff;
       color: #000;
       padding: 10px 20px;
       border: none;
@@ -62,53 +64,55 @@ width=device-width, initial-scale=1.0"/>
   </style>
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <h1>Мастер Кристина — Гадание, Чистка, Защита</h1>
   </header>
 
-  <section>
+  <section data-aos="fade-up">
     <h2>О себе</h2>
-    <p>Меня зовут Кристина. Более 10 лет я помогаю людям через гадание на картах, энергетическую чистку и постановку защиты. Работаю с заботой, честностью и вниманием к каждой судьбе.</p>
+    <p>Меня зовут Кристина. Более 10 лет я помогаю людям через гадание, очищение энергетики и защиту. Работаю с душой и полной отдачей.</p>
   </section>
 
-  <section>
+  <section data-aos="fade-left">
     <h2>Услуги</h2>
-    <p><strong>Гадание:</strong> расклады на 36 картах — ответы на личные, семейные и рабочие вопросы.</p>
-    <p><strong>Чистка:</strong> снятие негатива, восстановление внутренней энергии.</p>
-    <p><strong>Защита:</strong> постановка щитов от зависти, негатива, магического воздействия.</p>
+    <p><strong>Гадание:</strong> 36 карт — чёткие ответы на вопросы судьбы, любви, денег.</p>
+    <p><strong>Чистка:</strong> снятие негатива, восстановление внутреннего света.</p>
+    <p><strong>Защита:</strong> энергетический щит от зависти и злых воздействий.</p>
   </section>
 
-  <section>
+  <section data-aos="fade-right">
     <h2>Отзывы</h2>
-    <p>“После сеанса у Кристины я почувствовала лёгкость и ясность. Всё точно и по делу.” — Марина, 36 лет</p>
-    <p>“Была тревога — исчезла. Благодарю за чистку и защиту!” — Елена, 42 года</p>
+    <p>“После чистки я снова чувствую силу! Спасибо от сердца.” — Ирина</p>
+    <p>“Кристина — проводник, которому можно доверять.” — Анастасия</p>
   </section>
 
-  <section>
+  <section data-aos="zoom-in">
     <h2>Преимущества</h2>
     <ul>
-      <li>10+ лет практики</li>
-      <li>Работа без шаблонов — только индивидуальный подход</li>
+      <li>Опыт более 10 лет</li>
+      <li>Индивидуальный подход</li>
+      <li>Работа с позитивной энергией</li>
       <li>Полная конфиденциальность</li>
-      <li>Результат уже с первой встречи</li>
     </ul>
   </section>
 
-  <section class="contact-form">
+  <section class="contact-form" data-aos="fade-up">
     <h2>Записаться</h2>
     <form onsubmit="sendTelegram(event)">
       <input type="text" id="name" placeholder="Ваше имя" required />
-      <input type="text" id="contact" placeholder="Контакт (телефон, мессенджер)" required />
+      <input type="text" id="contact" placeholder="Контакт (телефон, Telegram...)" required />
       <textarea id="message" rows="4" placeholder="Ваш вопрос или сообщение" required></textarea>
       <button type="submit">Отправить</button>
     </form>
   </section>
 
-  <footer>
+  <footer data-aos="fade-up">
     <p>&copy; 2025 Мастер Кристина. Все права защищены.</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init();
     function sendTelegram(event) {
       event.preventDefault();
       const name = document.getElementById('name').value;
