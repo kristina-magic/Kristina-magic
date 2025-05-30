@@ -4,19 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Мастер Кристина — Магическая помощь</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Мастер Кристина — Гадание, Чистка, Защита</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: url('https://images.unsplash.com/photo-1599599810698-0c4c0e26e311?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background: #000 url('https://i.imgur.com/DuKZ5Fs.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
     }
     header, footer {
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(0, 0, 0, 0.8);
       padding: 20px;
       text-align: center;
     }
@@ -26,24 +25,22 @@
       color: #f0b3ff;
     }
     section {
-      background: rgba(0, 0, 0, 0.75);
-      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px 20px;
       max-width: 900px;
       margin: 30px auto;
       border-radius: 10px;
     }
     h2 {
       color: #ffccff;
-      position: relative;
-      padding-left: 24px;
+      margin-top: 0;
+      text-align: center;
     }
-    h2::before {
-      content: "★";
-      position: absolute;
-      left: 0;
-      color: #ffccff;
+    ul {
+      padding-left: 20px;
     }
-    .contact-form input, .contact-form textarea {
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
       padding: 10px;
       margin-top: 10px;
@@ -61,42 +58,78 @@
       cursor: pointer;
       border-radius: 4px;
     }
+
+    /* Карусель отзывов */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      height: 200px;
+    }
+    .carousel-slide {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .carousel-slide.active {
+      opacity: 1;
+      position: relative;
+    }
+    .carousel-slide p {
+      font-size: 1.1em;
+      line-height: 1.5;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <header data-aos="fade-down">
+  <header>
     <h1>Мастер Кристина — Гадание, Чистка, Защита</h1>
   </header>
 
-  <section data-aos="fade-up">
+  <section>
     <h2>О себе</h2>
-    <p>Меня зовут Кристина. Более 10 лет я помогаю людям через гадание, очищение энергетики и защиту. Работаю с душой и полной отдачей.</p>
+    <p>Меня зовут Кристина. Более 10 лет я помогаю людям: провожу диагностику, очищение и ставлю защиту. Работаю с обычными картами, без Таро. Индивидуальный подход, конфиденциальность и реальная помощь — мой принцип.</p>
   </section>
 
-  <section data-aos="fade-left">
+  <section>
     <h2>Услуги</h2>
-    <p><strong>Гадание:</strong> 36 карт — чёткие ответы на вопросы судьбы, любви, денег.</p>
-    <p><strong>Чистка:</strong> снятие негатива, восстановление внутреннего света.</p>
-    <p><strong>Защита:</strong> энергетический щит от зависти и злых воздействий.</p>
+    <p><strong>Гадание:</strong> работа с колодой из 36 карт — на личную жизнь, работу, будущее.</p>
+    <p><strong>Чистка:</strong> удаление тяжёлой энергии, последствий негатива, магического воздействия.</p>
+    <p><strong>Защита:</strong> установка энергетических щитов, восстановление сил и баланса.</p>
   </section>
 
-  <section data-aos="fade-right">
+  <section>
     <h2>Отзывы</h2>
-    <p>“После чистки я снова чувствую силу! Спасибо от сердца.” — Ирина</p>
-    <p>“Кристина — проводник, которому можно доверять.” — Анастасия</p>
+    <div class="carousel">
+      <div class="carousel-slide active">
+        <p><strong>Защита:</strong><br>Обратилась к Кристине после того, как на работе всё начало валиться из рук... Через неделю всё наладилось. Спасибо!</p>
+      </div>
+      <div class="carousel-slide">
+        <p><strong>Чистка:</strong><br>У меня была постоянная усталость и тревожность. После чистки — прилив сил, ушли страхи и бессонница.</p>
+      </div>
+      <div class="carousel-slide">
+        <p><strong>Расклад:</strong><br>Запуталась в отношениях. Расклад был точным до мурашек, приняла важное решение и почувствовала свободу.</p>
+      </div>
+      <div class="carousel-slide">
+        <p><strong>Ответ:</strong><br>Не знала, уходить ли с работы. Кристина помогла увидеть всё ясно, теперь я на новом месте и довольна.</p>
+      </div>
+    </div>
   </section>
 
-  <section data-aos="zoom-in">
+  <section>
     <h2>Преимущества</h2>
     <ul>
-      <li>Опыт более 10 лет</li>
-      <li>Индивидуальный подход</li>
-      <li>Работа с позитивной энергией</li>
-      <li>Полная конфиденциальность</li>
+      <li>10+ лет реальной практики</li>
+      <li>Работа без шаблонов — только под клиента</li>
+      <li>Глубинная диагностика и честность</li>
+      <li>Поддержка после консультации</li>
     </ul>
   </section>
 
-  <section class="contact-form" data-aos="fade-up">
+  <section class="contact-form">
     <h2>Записаться</h2>
     <form onsubmit="sendTelegram(event)">
       <input type="text" id="name" placeholder="Ваше имя" required />
@@ -106,13 +139,11 @@
     </form>
   </section>
 
-  <footer data-aos="fade-up">
+  <footer>
     <p>&copy; 2025 Мастер Кристина. Все права защищены.</p>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
     function sendTelegram(event) {
       event.preventDefault();
       const name = document.getElementById('name').value;
@@ -121,6 +152,14 @@
       const text = `Заявка с сайта:%0AИмя: ${name}%0AКонтакт: ${contact}%0AСообщение: ${message}`;
       window.open(`https://t.me/kris_ma8?text=${text}`, '_blank');
     }
+
+    let current = 0;
+    const slides = document.querySelectorAll(".carousel-slide");
+    setInterval(() => {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }, 5000);
   </script>
 </body>
 </html>
