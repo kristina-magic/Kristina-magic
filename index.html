@@ -1,13 +1,122 @@
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+width=device-width, initial-scale=1.0"/>
   <title>Мастер Кристина — Гадание, Чистка, Защита</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: url('https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header, footer {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #d8b4fe;
+    }
+    section {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 30px auto;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #d8b4fe;
+      position: relative;
+      padding-left: 30px;
+    }
+    h2::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.5em;
+      color: #f5e0ff;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background: #1e1e1e;
+      border: 1px solid #555;
+      color: #fff;
+      border-radius: 4px;
+    }
+    .contact-form button {
+      background: #d8b4fe;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Мастер Кристина</h1>
-  <p>Добро пожаловать на сайт. Здесь вы найдёте услуги по гаданию, чистке и энергетической защите.</p>
+  <header>
+    <h1>Мастер Кристина — Гадание, Чистка, Защита</h1>
+  </header>
+
+  <section>
+    <h2>О себе</h2>
+    <p>Меня зовут Кристина. Более 10 лет я помогаю людям через гадание на картах, энергетическую чистку и постановку защиты. Работаю с заботой, честностью и вниманием к каждой судьбе.</p>
+  </section>
+
+  <section>
+    <h2>Услуги</h2>
+    <p><strong>Гадание:</strong> расклады на 36 картах — ответы на личные, семейные и рабочие вопросы.</p>
+    <p><strong>Чистка:</strong> снятие негатива, восстановление внутренней энергии.</p>
+    <p><strong>Защита:</strong> постановка щитов от зависти, негатива, магического воздействия.</p>
+  </section>
+
+  <section>
+    <h2>Отзывы</h2>
+    <p>“После сеанса у Кристины я почувствовала лёгкость и ясность. Всё точно и по делу.” — Марина, 36 лет</p>
+    <p>“Была тревога — исчезла. Благодарю за чистку и защиту!” — Елена, 42 года</p>
+  </section>
+
+  <section>
+    <h2>Преимущества</h2>
+    <ul>
+      <li>10+ лет практики</li>
+      <li>Работа без шаблонов — только индивидуальный подход</li>
+      <li>Полная конфиденциальность</li>
+      <li>Результат уже с первой встречи</li>
+    </ul>
+  </section>
+
+  <section class="contact-form">
+    <h2>Записаться</h2>
+    <form onsubmit="sendTelegram(event)">
+      <input type="text" id="name" placeholder="Ваше имя" required />
+      <input type="text" id="contact" placeholder="Контакт (телефон, мессенджер)" required />
+      <textarea id="message" rows="4" placeholder="Ваш вопрос или сообщение" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Мастер Кристина. Все права защищены.</p>
+  </footer>
+
+  <script>
+    function sendTelegram(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const contact = document.getElementById('contact').value;
+      const message = document.getElementById('message').value;
+      const text = `Заявка с сайта:%0AИмя: ${name}%0AКонтакт: ${contact}%0AСообщение: ${message}`;
+      window.open(`https://t.me/kris_ma8?text=${text}`, '_blank');
+    }
+  </script>
 </body>
 </html>
