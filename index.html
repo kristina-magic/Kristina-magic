@@ -10,32 +10,57 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: #0b0a0f url('https://images.unsplash.com/photo-1601513445504-6fa9f5382cd6?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #f2eaff;
+      background: radial-gradient(ellipse at bottom, #1a0f1f 0%, #000000 100%);
+      color: #f0eaff;
+      overflow-x: hidden;
     }
+
+    .flame {
+      width: 30px;
+      height: 60px;
+      background: radial-gradient(ellipse at center, #ffd580 0%, #ff6600 70%, #cc3300 100%);
+      border-radius: 50% 50% 30% 30%;
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      margin-left: -15px;
+      animation: flicker 1s infinite alternate;
+      z-index: 0;
+    }
+
+    @keyframes flicker {
+      0% { transform: scale(1) rotate(0deg); opacity: 1; }
+      100% { transform: scale(1.05) rotate(1deg); opacity: 0.85; }
+    }
+
     header, footer {
-      background: rgba(10, 5, 20, 0.9);
+      background: rgba(20, 10, 30, 0.85);
       text-align: center;
       padding: 40px 20px;
       box-shadow: 0 0 25px #a86cff;
+      position: relative;
+      z-index: 1;
     }
+
     header h1 {
       font-family: 'Playfair Display', serif;
-      color: #e0c6ff;
+      color: #e0ccff;
       font-size: 2.6em;
       margin: 0;
-      text-shadow: 0 0 12px #c79fff;
+      text-shadow: 0 0 12px #d4aaff;
     }
+
     section {
-      background: rgba(20, 10, 30, 0.85);
+      background: rgba(20, 10, 30, 0.8);
       margin: 40px auto;
       padding: 30px 25px;
       max-width: 960px;
       border-radius: 14px;
-      box-shadow: 0 0 25px rgba(180, 120, 255, 0.4);
-      animation: fadeIn 1.6s ease;
+      box-shadow: 0 0 20px rgba(180, 120, 255, 0.3);
+      position: relative;
+      z-index: 1;
     }
+
     h2 {
       font-family: 'Playfair Display', serif;
       color: #ffd6ff;
@@ -43,16 +68,35 @@
       font-size: 1.8em;
       text-shadow: 0 0 6px #cc99ff;
     }
+
     p, li {
       font-size: 1.1em;
       line-height: 1.7;
     }
+
     ul {
       padding-left: 20px;
     }
-    .step, .faq {
-      margin-bottom: 20px;
+
+    .carousel {
+      position: relative;
+      height: 180px;
+      overflow: hidden;
     }
+
+    .carousel-slide {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+      position: relative;
+    }
+
     .contact-form input,
     .contact-form textarea {
       width: 100%;
@@ -63,6 +107,7 @@
       border-radius: 6px;
       margin-top: 10px;
     }
+
     .contact-form button {
       background: #cc99ff;
       color: #000;
@@ -73,81 +118,28 @@
       cursor: pointer;
       border-radius: 6px;
     }
-    .carousel {
-      position: relative;
-      height: 200px;
-      overflow: hidden;
-    }
-    .carousel-slide {
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-    .carousel-slide.active {
-      opacity: 1;
-      position: relative;
-    }
-    .carousel-slide p {
-      text-align: center;
-    }
-    .icons {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-    .icons div {
-      width: 110px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .icons img {
-      width: 60px;
-      height: 60px;
-      filter: drop-shadow(0 0 6px #d3b3ff);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
 <body>
+
+  <div class="flame"></div>
+
   <header>
     <h1>Мастер Кристина — Магическая помощь</h1>
   </header>
 
   <section>
     <h2>О себе</h2>
-    <p>Я Кристина. Более 10 лет работаю с энергетикой. Провожу диагностику, чищу, ставлю защиту и делаю точные расклады. Работаю только с колодой 36 карт, без Таро. Помогаю глубоко и эффективно — через реальный контакт с энергетикой человека.</p>
+    <p>Я Кристина. Более 10 лет я работаю с энергетикой и помогаю людям находить ответы, очищаться от негатива и восстанавливать силы. Работаю с колодой из 36 карт, без Таро. Помогаю понять суть, снять тяжести и защитить себя.</p>
   </section>
 
   <section>
     <h2>Как проходит работа</h2>
-    <div class="step"><strong>1. Диагностика:</strong> выясняем источник проблем</div>
-    <div class="step"><strong>2. Расклад:</strong> карты показывают путь и правду</div>
-    <div class="step"><strong>3. Чистка:</strong> снимаю негатив и чужое влияние</div>
-    <div class="step"><strong>4. Защита:</strong> ставлю щит, чтобы вас не трогали</div>
-  </section>
-
-  <section>
-    <h2>Услуги</h2>
-    <div class="icons">
-      <div><img src="https://cdn-icons-png.flaticon.com/512/756/756315.png" alt="Карты"/><br>Расклад</div>
-      <div><img src="https://cdn-icons-png.flaticon.com/512/599/599502.png" alt="Чистка"/><br>Чистка</div>
-      <div><img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="Защита"/><br>Защита</div>
-      <div><img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Вопрос"/><br>Ответы</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>До / После</h2>
     <ul>
-      <li>😓 Постоянная тревога → 💫 Внутреннее спокойствие</li>
-      <li>🕯 Ощущение тяжести → 🌿 Лёгкость и энергия</li>
-      <li>🚪 Закрытые пути → 🌠 Открылись возможности</li>
+      <li><strong>1. Диагностика:</strong> считываю энергетическое состояние</li>
+      <li><strong>2. Расклад:</strong> карты показывают причину и путь</li>
+      <li><strong>3. Чистка:</strong> снимаю негатив и блоки</li>
+      <li><strong>4. Защита:</strong> ставлю сильную защиту на человека и пространство</li>
     </ul>
   </section>
 
@@ -155,27 +147,20 @@
     <h2>Отзывы</h2>
     <div class="carousel">
       <div class="carousel-slide active">
-        <p><strong>Расклад:</strong><br>Ситуация в личной жизни стала понятна, всё разложено по полочкам. Чувствую, как будто пелена ушла.</p>
+        <p><strong>Чистка:</strong><br>Я чувствовала постоянную тревогу. После работы с Кристиной — как будто с меня сняли груз. Настроение, сон и энергия восстановились!</p>
       </div>
       <div class="carousel-slide">
-        <p><strong>Чистка:</strong><br>Я чувствовала, что что-то мешает. После чистки — словно сняли оковы. Благодарю, Кристина!</p>
+        <p><strong>Расклад:</strong><br>Ситуация была запутанная, но Кристина чётко всё объяснила. Теперь знаю, как действовать, и уже пошли улучшения.</p>
       </div>
       <div class="carousel-slide">
-        <p><strong>Защита:</strong><br>Раньше с меня тянули энергию, теперь я спокойна, даже когда вокруг — хаос.</p>
+        <p><strong>Защита:</strong><br>После сеанса стала спокойнее, перестали лезть неприятности и конфликты. Очень благодарна!</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Частые вопросы</h2>
-    <div class="faq"><strong>Работаете дистанционно?</strong> — Да, полностью онлайн. Энергетика не знает расстояний.</div>
-    <div class="faq"><strong>Сколько по времени?</strong> — Диагностика и работа занимают 40–60 минут.</div>
-    <div class="faq"><strong>Что нужно?</strong> — Ваше имя, фото (по желанию) и чёткий вопрос.</div>
-  </section>
-
-  <section class="contact-form">
     <h2>Записаться</h2>
-    <form onsubmit="sendTelegram(event)">
+    <form class="contact-form" onsubmit="sendTelegram(event)">
       <input type="text" id="name" placeholder="Ваше имя" required />
       <input type="text" id="contact" placeholder="Контакт (телефон, Telegram...)" required />
       <textarea id="message" rows="4" placeholder="Ваш вопрос или сообщение" required></textarea>
@@ -203,7 +188,7 @@
       slides[current].classList.remove("active");
       current = (current + 1) % slides.length;
       slides[current].classList.add("active");
-    }, 6000);
+    }, 7000);
   </script>
 </body>
 </html>
