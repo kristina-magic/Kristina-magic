@@ -5,140 +5,172 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Мастер Кристина — Магическая помощь</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: #000 url('https://images.unsplash.com/photo-1605116792011-8f2a41a6d58f?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background: #0b0a0f url('https://images.unsplash.com/photo-1601513445504-6fa9f5382cd6?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
+      color: #f2eaff;
     }
     header, footer {
-      background: rgba(0, 0, 0, 0.85);
-      padding: 30px 20px;
+      background: rgba(10, 5, 20, 0.9);
       text-align: center;
-      box-shadow: 0 0 10px #a86cff;
+      padding: 40px 20px;
+      box-shadow: 0 0 25px #a86cff;
     }
     header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #e0c6ff;
+      font-size: 2.6em;
       margin: 0;
-      font-family: 'Cinzel Decorative', cursive;
-      font-size: 2em;
-      color: #d5bfff;
-      text-shadow: 1px 1px 10px #b98aff;
+      text-shadow: 0 0 12px #c79fff;
     }
     section {
-      background: rgba(10, 10, 10, 0.8);
+      background: rgba(20, 10, 30, 0.85);
+      margin: 40px auto;
       padding: 30px 25px;
-      max-width: 900px;
-      margin: 30px auto;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(180, 120, 255, 0.3);
+      max-width: 960px;
+      border-radius: 14px;
+      box-shadow: 0 0 25px rgba(180, 120, 255, 0.4);
+      animation: fadeIn 1.6s ease;
     }
     h2 {
-      font-family: 'Cinzel Decorative', cursive;
-      font-size: 1.6em;
+      font-family: 'Playfair Display', serif;
+      color: #ffd6ff;
       text-align: center;
-      color: #ffccff;
-      margin-top: 0;
+      font-size: 1.8em;
       text-shadow: 0 0 6px #cc99ff;
+    }
+    p, li {
+      font-size: 1.1em;
+      line-height: 1.7;
     }
     ul {
       padding-left: 20px;
     }
-    .carousel-slide p {
-      font-size: 1.1em;
-      line-height: 1.6;
-      text-align: center;
+    .step, .faq {
+      margin-bottom: 20px;
     }
     .contact-form input,
     .contact-form textarea {
       width: 100%;
-      padding: 10px;
-      margin-top: 10px;
+      padding: 12px;
       background: #1e1e1e;
-      border: 1px solid #555;
       color: #fff;
+      border: 1px solid #666;
       border-radius: 6px;
-      font-size: 1em;
+      margin-top: 10px;
     }
     .contact-form button {
       background: #cc99ff;
       color: #000;
       padding: 12px 24px;
-      font-size: 1em;
       font-weight: bold;
       border: none;
       margin-top: 12px;
       cursor: pointer;
       border-radius: 6px;
-      transition: background 0.3s ease;
-    }
-    .contact-form button:hover {
-      background: #e0bbff;
     }
     .carousel {
       position: relative;
-      overflow: hidden;
       height: 200px;
+      overflow: hidden;
     }
     .carousel-slide {
       opacity: 0;
       transition: opacity 1s ease-in-out;
       position: absolute;
       top: 0;
-      left: 0;
       width: 100%;
     }
     .carousel-slide.active {
       opacity: 1;
       position: relative;
     }
+    .carousel-slide p {
+      text-align: center;
+    }
+    .icons {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .icons div {
+      width: 110px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .icons img {
+      width: 60px;
+      height: 60px;
+      filter: drop-shadow(0 0 6px #d3b3ff);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Мастер Кристина — Гадание, Чистка, Защита</h1>
+    <h1>Мастер Кристина — Магическая помощь</h1>
   </header>
 
   <section>
     <h2>О себе</h2>
-    <p>Я — Кристина. Более 10 лет провожу диагностику, энергетическую чистку, ставлю защиту и провожу расклады. Работаю на обычных картах (36), без Таро. Моя цель — помочь вам найти ответы и восстановить силу.</p>
+    <p>Я Кристина. Более 10 лет работаю с энергетикой. Провожу диагностику, чищу, ставлю защиту и делаю точные расклады. Работаю только с колодой 36 карт, без Таро. Помогаю глубоко и эффективно — через реальный контакт с энергетикой человека.</p>
+  </section>
+
+  <section>
+    <h2>Как проходит работа</h2>
+    <div class="step"><strong>1. Диагностика:</strong> выясняем источник проблем</div>
+    <div class="step"><strong>2. Расклад:</strong> карты показывают путь и правду</div>
+    <div class="step"><strong>3. Чистка:</strong> снимаю негатив и чужое влияние</div>
+    <div class="step"><strong>4. Защита:</strong> ставлю щит, чтобы вас не трогали</div>
   </section>
 
   <section>
     <h2>Услуги</h2>
-    <p><strong>Гадание:</strong> подробные расклады на 36 картах по важным вопросам жизни.</p>
-    <p><strong>Чистка:</strong> удаление негатива, снятие последствий чужого вмешательства.</p>
-    <p><strong>Защита:</strong> энергетическая защита от зависти, сглазов, чужого влияния.</p>
+    <div class="icons">
+      <div><img src="https://cdn-icons-png.flaticon.com/512/756/756315.png" alt="Карты"/><br>Расклад</div>
+      <div><img src="https://cdn-icons-png.flaticon.com/512/599/599502.png" alt="Чистка"/><br>Чистка</div>
+      <div><img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="Защита"/><br>Защита</div>
+      <div><img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Вопрос"/><br>Ответы</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>До / После</h2>
+    <ul>
+      <li>😓 Постоянная тревога → 💫 Внутреннее спокойствие</li>
+      <li>🕯 Ощущение тяжести → 🌿 Лёгкость и энергия</li>
+      <li>🚪 Закрытые пути → 🌠 Открылись возможности</li>
+    </ul>
   </section>
 
   <section>
     <h2>Отзывы</h2>
     <div class="carousel">
       <div class="carousel-slide active">
-        <p><strong>Защита:</strong><br>Обратилась к Кристине после того, как на работе всё начало валиться из рук... Через неделю всё наладилось. Спасибо!</p>
+        <p><strong>Расклад:</strong><br>Ситуация в личной жизни стала понятна, всё разложено по полочкам. Чувствую, как будто пелена ушла.</p>
       </div>
       <div class="carousel-slide">
-        <p><strong>Чистка:</strong><br>У меня была постоянная усталость и тревожность. После чистки — прилив сил, ушли страхи и бессонница.</p>
+        <p><strong>Чистка:</strong><br>Я чувствовала, что что-то мешает. После чистки — словно сняли оковы. Благодарю, Кристина!</p>
       </div>
       <div class="carousel-slide">
-        <p><strong>Расклад:</strong><br>Запуталась в отношениях. Расклад был точным до мурашек, приняла важное решение и почувствовала свободу.</p>
-      </div>
-      <div class="carousel-slide">
-        <p><strong>Ответ:</strong><br>Не знала, уходить ли с работы. Кристина помогла увидеть всё ясно, теперь я на новом месте и довольна.</p>
+        <p><strong>Защита:</strong><br>Раньше с меня тянули энергию, теперь я спокойна, даже когда вокруг — хаос.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Преимущества</h2>
-    <ul>
-      <li>10+ лет практики</li>
-      <li>Индивидуальный подход к каждому</li>
-      <li>Работа без шаблонов</li>
-      <li>Реальные результаты</li>
-    </ul>
+    <h2>Частые вопросы</h2>
+    <div class="faq"><strong>Работаете дистанционно?</strong> — Да, полностью онлайн. Энергетика не знает расстояний.</div>
+    <div class="faq"><strong>Сколько по времени?</strong> — Диагностика и работа занимают 40–60 минут.</div>
+    <div class="faq"><strong>Что нужно?</strong> — Ваше имя, фото (по желанию) и чёткий вопрос.</div>
   </section>
 
   <section class="contact-form">
@@ -171,7 +203,7 @@
       slides[current].classList.remove("active");
       current = (current + 1) % slides.length;
       slides[current].classList.add("active");
-    }, 5000);
+    }, 6000);
   </script>
 </body>
 </html>
